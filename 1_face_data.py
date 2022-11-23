@@ -29,14 +29,14 @@ while True:
         count += 1
         
         # Salve a imagem capturada na pasta de conjuntos de dados (formato jpg)
-        cv2.imwrite("dataset/" + str(face_id) + '.' + str(count) + ".jpg", gray[y:y+h,x:x+w])
+        cv2.imwrite("faces/" + str(face_id) + ".jpg", gray[y:y+h,x:x+w])
         cv2.imshow('image', img)
         
 
     k = cv2.waitKey(100) & 0xff
     if k == 27: #Press 'ESC' para sair
         break
-    elif count >= 6: #Máximo de fotos configuradas
+    elif count >= 1: #Máximo de fotos configuradas
         break 
 
 cap.release()
