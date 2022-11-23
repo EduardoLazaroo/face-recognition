@@ -36,7 +36,7 @@ while True:
     k = cv2.waitKey(100) & 0xff
     if k == 27: #Press 'ESC' para sair
         break
-    elif count >= 6: #Máximo de fotos configuradas
+    elif count >= 1: #Máximo de fotos configuradas
         break 
 
 cap.release()
