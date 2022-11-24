@@ -29,7 +29,7 @@ while True:
         count += 1
         
         # Salve a imagem capturada na pasta de conjuntos de dados (formato jpg)
-        cv2.imwrite("dataset/" + str(face_id) + '.' + str(count) + ".jpg", gray[y:y+h,x:x+w])
+        cv2.imwrite("faces/" + str(face_id) + '.' + str(count) + ".jpg", gray[y:y+h,x:x+w])
         cv2.imshow('image', img)
         
 
