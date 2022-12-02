@@ -3,7 +3,16 @@ import os, sys
 import cv2
 import numpy as np
 import math
-from utils import ListClass
+import utils
+
+#import das classes do utils
+check_cam = utils.checkCam()
+check_face = utils.checkFace()
+check_error = utils.errorCam()
+
+#adpter para utilizarmos 
+check_error_adpter = utils.errorCamAdapter(check_error)
+adm = utils.ADM()
 
 #criando a função de calculo (%)
 def face_confidence(face_distance, face_match_threshold=0.6):
@@ -18,7 +27,7 @@ def face_confidence(face_distance, face_match_threshold=0.6):
 
 #declarando variaveis
 class FaceRecognition:
-    empty_list = ListClass()
+    empty_list = utils.ListClass()
     face_locations, face_encodings, face_names, known_face_encodings, known_face_names = empty_list.generate_list(5)
 
     process_current_frame = True
@@ -38,12 +47,17 @@ class FaceRecognition:
         #printando todas as faces cadastradas na pasta
         print(self.known_face_names)
 
-    #abertua de  camera
+    #Messagem de inicialização de camera pelo adpter
+    adm.printADM(check_cam)
     def run_recognition(self):
         video_capture = cv2.VideoCapture(0)
+        #Print checagem de imagem pelo adpter
+        adm.printADM(check_face)
 
         if not video_capture.isOpened():
-            sys.exit('Video source not found...')
+            #error no adpter
+            adm.printADM(check_error_adpter)    
+            sys.exit('Video desligado...')
 
         while True:
             ret, frame = video_capture.read()
