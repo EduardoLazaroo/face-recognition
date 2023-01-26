@@ -1,8 +1,7 @@
+RECONHECIMENTO DE FACE A PARTIR DE IMAGENS COM OPENCV HAAR CASCADES
 
-RECONHECIMENTO DE IMAGENS COM REDES NEURAIS
+Um algoritmo capaz de detectar objetos em imagens, independentemente de sua localização e escala em uma imagem. Além disso, esse algoritmo pode ser executado em tempo real, possibilitando a detecção de objetos em streams de vídeo. É indiscutivelmente o algoritmo de detecção de objetos mais popular do OpenCV.
 
-O objetivo principal é criar uma rede neural que consiga identificar e cadastrar usuários a partir de imagens de seu rosto. Sendo então, autenticado a face do usuário e concebendo o acesso ou não a determinada utilização.
+O objetivo principal foi criar uma rede neural que consiga identificar e cadastrar usuários a partir de uma imagem de seu rosto, sendo então demonstrando em tempo real a proximidade da face do usuário cadastrado com a atual captura de vídeo.
 
-Uma sala restrita do hospital deve ser acessada por um grupo limitado de usuários. Tendo em conta que o hospital é um lugar de grande retenção de micro-organismos e bactérias, será de suma importância evitar contado de suas mãos em chaves e maçanetas.
-
-Tal ação diminuirá o toque nas maçanetas sem contar na diminuição no rodízio de chaves e aumento de segurança.
+Artigo: https://pyimagesearch.com/2021/04/12/opencv-haar-cascades/
